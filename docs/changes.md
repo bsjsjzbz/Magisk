@@ -1,4 +1,4 @@
-# Magisk Changelog
+#Magisk Changelog
 
 ### v29.0
 
@@ -384,45 +384,45 @@
 - [General] Support Android Q Beta 2
 - [MagiskInit] New sbin overlay setup process for better compatibility
 - [MagiskInit] Allow long pressing volume up to boot to recovery in recovery mode
-- [MagicMount] Use proper system_root mirror
-- [MagicMount] Use self created device nodes for mirrors
-- [MagicMount] Do not allow adding new files/folders in partition root folder (e.g. /system or /vendor)
+- [MagicMount]使用正确的系统根镜像(_R)
+- [MagicMount]将自创建的设备节点用于镜像
+- [MagicMount]不允许在分区根文件夹(例如/system或/vendor)中添加新文件/文件夹
 
-### v19.0
+###v19.0
 
-- [General] Remove usage of magisk.img
-- [General] Add 64 bit magisk binary for native 64 bit support
-- [General] Support A only system-as-root devices that released with Android 9.0
-- [General] Support non EXT4 system and vendor partitions
-- [MagiskHide] Use Zygote ptracing for monitoring new processes
-- [MagiskHide] Targets are now per-application component
-- [MagiskInit] Support Android Q (no logical partition support yet!)
-- [MagiskPolicy] Support Android Q new split sepolicy setup
-- [MagiskInit] Move sbin overlay creation from main daemon post-fs-data to early-init
-- [General] Service scripts now run in parallel
-- [MagiskInit] Directly inject magisk services to init.rc
-- [General] Use lzma2 compressed ramdisk in extreme conditions
-- [MagicMount] Clone attributes from original file if exists
-- [MagiskSU] Use `ACTION_REBOOT` intent to workaround some OEM broadcast restrictions
-- [General] Use `skip_mount` instead of `auto_mount`: from opt-in to opt-out
+- [一般的]删除magisk.img的用法
+- [一般的]添加64位magisk二进制文件以获得本机64位支持
+- [一般的]仅支持随Android9.0发布的系统作为根设备
+- [一般的]支持非EXT4系统和供应商分区
+- [MagiskHide]使用Zygote跟踪监控新流程
+- [MagiskHide]目标现在是每个应用程序的组件
+- [MagiskInit]支持Android Q(还不支持逻辑分区！)
+- [MagiskPolicy]支持Android Q新拆分sepolicy设置
+- [MagiskInit]将sbin覆盖创建从主守护程序post-fs-data移到early-init
+- [一般的]服务脚本现在并行运行
+- [MagiskInit]直接将magisk服务注入init.rc
+- [一般的]在极端条件下使用lzma2压缩的ramdisk
+- [MagicMount]从原始文件克隆属性(如果存在)
+- [MagiskSU]使用`action_REBOOT`打算解决一些OEM广播限制
+- [一般的]使用`skip_mount`而不是`auto_mount`：从选择加入到选择不加入
 
-### v18.1
+###v18.1
 
-- [General] Support EMUI 9.0
-- [General] Support Kirin 960 devices
-- [General] Support down to Android 4.2
-- [General] Major code base modernization under-the-hood
+- [一般的]支持EMUI9.0
+- [一般的]支持麒麟960设备
+- [一般的]支持下至Android4.2
+- [一般的]机罩下的主要代码库现代化
 
-### v18.0
+###v18.0
 
-- [General] Migrate all code base to C++
-- [General] Modify database natively instead of going through Magisk Manager
-- [General] Deprecate path /sbin/.core, please start using /sbin/.magisk
-- [General] Boot scripts are moved from `<magisk_img>/.core/<stage>.d` to `/data/adb/<stage>.d`
-- [General] Remove native systemless hosts (Magisk Manager is updated with a built-in systemless hosts module)
-- [General] Allow module post-fs-data.sh scripts to disable/remove modules
-- [MagiskHide] Use component names instead of process names as targets
-- [MagiskHide] Add procfs protection on SDK 24+ (Nougat)
+- [一般的]将所有代码基迁移到C++
+- [一般的]本机修改数据库，而不是通过Magisk Manager
+- [一般的]不建议使用路径/sbin/.core，请开始使用/sbin/.magisk
+- [一般的]启动脚本从`<magisk_img>/.core/<stage>.d`到`/data/adb/<stage>.d`
+- [一般的]删除本机无系统主机(使用内置的无系统主机模块更新Magisk Manager)
+- [一般的]允许模块post-fs-data.sh脚本禁用/删除模块
+- [MagiskHide]使用组件名称而不是进程名称作为目标
+- [MagiskHide]在SDK24+(牛轧糖)上添加procfs保护
 - [MagiskHide] Remove the folder /.backup to prevent detection
 - [MagiskHide] Hide list is now stored in database instead of raw textfile in images
 - [MagiskHide] Add "--status" option to CLI
